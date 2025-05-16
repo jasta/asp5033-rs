@@ -1,0 +1,28 @@
+[package]
+name = "asp5033"
+version = "0.1.0"
+authors = ["Josh Guilfoyle <jasta@devtcg.org>"]
+description = "Platform agnostic driver for the QioTek ASP5033 AirSpeed sensor (I2C or CAN)"
+keywords = ["embedded-hal-driver", "async", "i2c", "sensor", "airspeed"]
+categories = ["no-std::no-alloc", "embedded", "asynchronous"]
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+embedded-hal-async = "^1"
+measurements = { version = "0.11.0" }
+thiserror = { version = "2.0.2", default-features = false, features = [] }
+log = "0.4.27"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11.1", features = ["embedded-hal-async"] }
+embedded-hal = "^1"
+ftdi-embedded-hal = "0.23.1"
+ftdi = "0.1.3"
+futures = "0.3.31"
+derive-new = "0.7.0"
+log = "0.4.27"
+env_logger = "0.11.8"
+tokio = { version = "1.45.0", features = ["rt", "macros", "test-util"] }
+anyhow = "1.0.98"
+thiserror = { version = "*", features = ["std"] }
